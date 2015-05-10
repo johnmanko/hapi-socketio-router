@@ -105,14 +105,6 @@ Namespace files are defined as an array of objects.
                     }
                 },
                 {
-                    event: "disconnection",
-                    handler: function (socket) {
-
-                        // YOUR SOCKET STUFF HERE
-
-                    }
-                },
-                {
                     event: "some-other-event",
                     handler: function (socket) {
 
