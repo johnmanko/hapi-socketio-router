@@ -33,18 +33,13 @@ First, let's create a directory with registration modules.  For instance, if we 
                             socket.emit("news", {message:'We got your request on namespace: ' + socket.nsp.name});
                         });
 
+
+                        socket.on('disconnect', function (data) {
+                            console.log('user disconnected from '  + socket.nsp.name);
+                        });
+
                         console.log('user connection to '  + socket.nsp.name);
 
-                    }
-                },
-                {
-                    event: "disconnection",
-                    handler: function (socket) function (socket) {
-
-                        /* access namespace */
-                        var nsp = socket.nsp;
-
-                        console.log('user disconnected from '  + nsp.name);
                     }
                 }
             ]
