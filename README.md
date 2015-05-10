@@ -51,7 +51,7 @@ First, let's create a directory with registration modules.  For instance, if we 
         }
     ];
 
-As you can, the module is defined as an array of configurations by namespace.  This allows you to put all your namespaces into a single file, or you can break them out into individual files.
+As you can see, the module is defined as an array of configurations by namespace.  This allows you to put all your namespaces into a single file, or you can break them out into individual files.
 
 Now, let's load our events:
 
@@ -81,3 +81,54 @@ Now, let's load our events:
         }
     );
 
+Specification
+-------------
+
+### Valid options ###
+
+Valid `options` which are passed to the plugin include the following.  Please see [glob](https://github.com/isaacs/node-glob) for details on glob specific options.
+
+1. `cwd` - (optional) Instructs the plugin to change to this directory, otherwise load namespace files from project root + `namespaces` path parameter.  This is passed to `glob`.
+2. `ignore` - (optional) Another glob option. 
+3. `options` - (optional) [Socket.io options](http://socket.io/docs/server-api/#) that will be passed to the socket initialization.
+4. `namespaces` - (required) A glob path to namespace files.  Example: `socket/*.js`.  Also, see `doc/example.js` for a namespace file example.  
+
+### Namespace files ###
+
+Namespace files are defined as an array of objects. 
+
+    module.exports = [
+        {
+            namespace: "/some-namespace",
+            events: [
+                {
+                    event: "connection",
+                    handler: function (socket) {
+
+                        // YOUR SOCKET STUFF HERE
+
+                    }
+                },
+                {
+                    event: "disconnection",
+                    handler: function (socket) {
+
+                        // YOUR SOCKET STUFF HERE
+
+                    }
+                },
+                {
+                    event: "some-other-event",
+                    handler: function (socket) {
+
+                        // YOUR SOCKET STUFF HERE
+
+                    }
+                }
+            ]
+        },
+        {
+            namespace: "/some-namespace-2",
+            events: [....]
+        }
+    ];
