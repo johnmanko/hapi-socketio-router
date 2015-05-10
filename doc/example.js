@@ -18,8 +18,11 @@ module.exports = [
             {
                 event: "disconnection",
                 handler: function (socket) {
-
-                    nsp.emit('user disconnected from ' + nsp.name);
+                    
+                    /* access namespace */
+                    var nsp = socket.nsp;
+                    
+                    console.log('user disconnected from '  + nsp.name);
                 }
             }
         ]
@@ -48,7 +51,7 @@ module.exports = [
                     /* access namespace */
                     var nsp = socket.nsp;
 
-                    nsp.emit('user disconnected from ' + nsp.name);
+                    console.log('user disconnected from '  + nsp.name);
                 }
             }
         ]

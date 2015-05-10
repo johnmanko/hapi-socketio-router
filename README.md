@@ -39,12 +39,12 @@ First, let's create a directory with registration modules.  For instance, if we 
                 },
                 {
                     event: "disconnection",
-                    handler: function (socket) {
+                    handler: function (socket) function (socket) {
 
                         /* access namespace */
                         var nsp = socket.nsp;
 
-                        nsp.emit('user disconnected from ' + nsp.name);
+                        console.log('user disconnected from '  + nsp.name);
                     }
                 }
             ]
