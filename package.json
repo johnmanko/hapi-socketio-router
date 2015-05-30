@@ -1,48 +1,43 @@
 {
-    "name": "hapi-socketio-router",
-    "version": "1.0.1",
-    "description": "A hapi plugin for socket.io that accepts an array of JSON definitions of namespace/events to register with socket.io.  Great for modularizing your namespace definitions.",
-    "main": "./lib",
-    "scripts": {
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/johnmanko/hapi-socketio-router.git"
-    },
-    "keywords": [
-        "hapi",
-        "hapijs",
-        "socket.io"
-    ],
-    "author": {
-        "name": "John Manko",
-        "email": "foss@johnmanko.com"
-    },
-    "license": "GPLv2",
-    "bugs": {
-        "url": "https://github.com/johnmanko/hapi-socketio-router/issues"
-    },
-    "homepage": "https://github.com/johnmanko/hapi-socketio-router#readme",
-    "devDependencies": {
-        "hapi": "^8.0.0",
-        "socket.io": "^1.3.5"
-    },
-    "peerDependencies": {
-        "hapi": "^8.0.0",
-        "socket.io": "^1.3.5"
-    },
-    "dependencies": {
-        "glob": "^5.0.3",
-        "socket.io": "^1.3.5"
-    },
-    "maintainers": [
-        {
-            "name": "John Manko",
-            "email": "foss@johnmanko.com"
-        }
-    ],
-    "directories": {
-        "lib": "./lib",
-        "doc": "./doc"
+  "name": "hapi-socketio-router",
+  "version": "1.0.2",
+  "description": "A hapi plugin for socket.io that accepts an array of JSON definitions of namespace/events to register with socket.io.  Great for modularizing your namespace definitions.",
+  "main": "./lib",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmanko/hapi-socketio-router.git"
+  },
+  "keywords": [
+    "hapi",
+    "hapijs",
+    "socket.io"
+  ],
+  "author": {
+    "name": "John Manko",
+    "email": "foss@johnmanko.com"
+  },
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/johnmanko/hapi-socketio-router/issues"
+  },
+  "homepage": "https://github.com/johnmanko/hapi-socketio-router#readme",
+  "peerDependencies": {
+    "hapi": "^8.0.0",
+    "socket.io": "^1.3.5"
+  },
+  "dependencies": {
+    "glob": "^5.0.3",
+    "lodash": "^3.9.1"
+  },
+  "maintainers": [
+    {
+      "name": "John Manko",
+      "email": "foss@johnmanko.com"
     }
+  ],
+  "directories": {
+    "lib": "./lib",
+    "doc": "./doc"
+  }
 }
